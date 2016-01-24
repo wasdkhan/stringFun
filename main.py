@@ -6,6 +6,15 @@ if option == 'rev': #reverse
   for i in range(len(string)):
     newString += string[-i-1] #Last character starts on -1
   print newString
+if option == 'vow': #vowels
+  vowelCount = {'a':0,'e':0,'i':0,'o':0,'u':0} #vowel count dict
+  for letter in string: #iterate through letters
+    for vowel in vowelCount.keys(): #iterate through vowels
+      if letter.lower() == vowel: 
+        vowelCount[vowel] +=1 #add one when hit
+        break #stop when same
+  for vowel,count in vowelCount.items():
+    print vowel, '>', count,  #print vowel along with count
 if option == 'pl':  #pig latin
   wordPuncs = re.findall(r'(\w+)(\W*)',string)  #search for words and punctuation
   vowels = ('a','e','i','o','u')
@@ -24,7 +33,3 @@ if option == 'pl':  #pig latin
       newString += (pword+wordPunc[1]+' ') #combine word, punctuation, and space
   newString = newString[:-1]  #remove last space
   print newString
-        
-#    'Hi, my name is Jim!'
-#    'iHay, ymay amenay isay imJay!'
-#    contractions may be a problem ex) that's
