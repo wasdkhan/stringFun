@@ -10,6 +10,9 @@ if option == 'rev': print rev(string)
 if option == 'pal': #palindrome
   newString = string.lower()
   print newString == rev(string.lower())
+if option == 'wc': #wordcount
+  words = re.findall(r'\w+',string)
+  print len(words)
 if option == 'vow': #vowels
   vowelCount = {'a':0,'e':0,'i':0,'o':0,'u':0} #vowel count dict
   for letter in string: #iterate through letters
@@ -18,7 +21,7 @@ if option == 'vow': #vowels
         vowelCount[vowel] +=1 #add one when hit
         break #stop when same
   for vowel,count in vowelCount.items():
-    print vowel, '>', count,  #print vowel along with count
+    print vowel, '>', count,  #print vowel along with count  
 if option == 'pl':  #pig latin
   wordPuncs = re.findall(r'(\w+)(\W*)',string)  #search for words and punctuation
   vowels = ('a','e','i','o','u')
