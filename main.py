@@ -1,11 +1,15 @@
 import re
 option = raw_input('enter option: ')
 string = raw_input('enter string: ')
-newString = ''
-if option == 'rev': #reverse
+def rev(string):  #reverse
+  newString = ''
   for i in range(len(string)):
     newString += string[-i-1] #Last character starts on -1
-  print newString
+  return newString
+if option == 'rev': print rev(string)
+if option == 'pal': #palindrome
+  newString = string.lower()
+  print newString == rev(string.lower())
 if option == 'vow': #vowels
   vowelCount = {'a':0,'e':0,'i':0,'o':0,'u':0} #vowel count dict
   for letter in string: #iterate through letters
