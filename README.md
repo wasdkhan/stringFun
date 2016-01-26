@@ -4,7 +4,9 @@ rev - prints REVersed text
 
 wc - Counts number of Words in text
 
-pal - returns whether or not text is a PALindrome
+pal - returns whether or not text is a PALindrome-a word that is spelled the 
+same 
+forwards and backwards.
 
 vow - counts the number of VOWels in the text
 
