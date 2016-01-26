@@ -11,7 +11,7 @@ if option == 'pal': #palindrome
   newString = string.lower()
   print newString == rev(string.lower())
 if option == 'wc': #wordcount
-  words = re.findall(r'\w+',string)
+  words = re.findall(r'[\w\']+',string)
   print len(words)
 if option == 'vow': #vowels
   vowelCount = {'a':0,'e':0,'i':0,'o':0,'u':0} #vowel count dict
