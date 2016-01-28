@@ -21,7 +21,7 @@ if option == 'wf': #word frequency
       count[word] += 1
     else:
       count[word] = 1
-  for key in count:
+  for key in sorted(count,reverse=True):
     print key, count[key]
 if option == 'vow': #vowels
   vowelCount = {'a':0,'e':0,'i':0,'o':0,'u':0} #vowel count dict
