@@ -13,6 +13,16 @@ if option == 'pal': #palindrome
 if option == 'wc': #wordcount
   words = re.findall(r'[\w\']+',string)
   print len(words)
+if option == 'wf':
+  words = re.findall(r'[\w\']+',string)
+  count = {}
+  for word in words:
+    if word in count:
+      count[word] += 1
+    else:
+      count[word] = 1
+  for key in count:
+    print key, count[key]
 if option == 'vow': #vowels
   vowelCount = {'a':0,'e':0,'i':0,'o':0,'u':0} #vowel count dict
   for letter in string: #iterate through letters
