@@ -4,6 +4,8 @@ rev - prints REVersed text
 
 wc - Counts number of Words in text
 
+wf - Displays word and Word Frequency
+
 pal - returns whether or not text is a PALindrome-a word that is spelled the 
 same 
 forwards and backwards.

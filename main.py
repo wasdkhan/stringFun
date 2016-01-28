@@ -13,7 +13,7 @@ if option == 'pal': #palindrome
 if option == 'wc': #wordcount
   words = re.findall(r'[\w\']+',string)
   print len(words)
-if option == 'wf':
+if option == 'wf': #word frequency
   words = re.findall(r'[\w\']+',string)
   count = {}
   for word in words:
