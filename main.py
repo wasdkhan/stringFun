@@ -6,15 +6,18 @@ def rev(string):  #reverse
   for i in range(len(string)):
     newString += string[-i-1] #Last character starts on -1
   return newString
+def wordlist(string):  #make the list of words
+  words = re.findall(r'[\w\']+',string)
+  return words
 if option == 'rev': print rev(string)
 if option == 'pal': #palindrome
   newString = string.lower()
   print newString == rev(string.lower())
 if option == 'wc': #wordcount
-  words = re.findall(r'[\w\']+',string)
+  words = wordlist(string)
   print len(words)
 if option == 'wf': #word frequency
-  words = re.findall(r'[\w\']+',string)
+  words = wordlist(string)
   count = {}
   for word in words:
     if word in count:
