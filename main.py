@@ -1,6 +1,6 @@
 import re
-option = raw_input('enter option: ')
 string = raw_input('enter string: ')
+option = raw_input('enter option: ')
 def rev(string):  #reverse
   newString = ''
   for i in range(len(string)):
